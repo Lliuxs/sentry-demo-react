@@ -1,6 +1,6 @@
 const dayjs = require('dayjs')
 const environment = 'production';
-const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_a`;
+const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_b`;
 const { override } = require('customize-cra');
 // https://www.npmjs.com/package/@sentry/webpack-plugin
 const SentryCliPlugin = require('@sentry/webpack-plugin');

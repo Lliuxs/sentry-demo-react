@@ -65,10 +65,10 @@ function UserAdd() {
 
 function UserDetail(props) {
   const params = useParams();
+  console.log(params.x.y());
   // let [searchParams] = useSearchParams();
   // shopee searchParams
   // console.log(searchParams.get('name'), 'searchParams');
-  console.log(params.a.b());
   return <div>UserDetail: {params.id}</div>;
 }
 
@@ -123,7 +123,8 @@ const store = createStore(
 
 function App() {
   const methodDoesNotExist = () => {
-    console.log(window.x.y());
+    console.log('methodDoesNotExist error')
+    console.log(window.m.n.o);
   };
   return (
     <div className='App'>
