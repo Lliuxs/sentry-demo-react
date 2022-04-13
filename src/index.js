@@ -10,7 +10,7 @@ import SentryRRWeb from '@sentry/rrweb';
 import dayjs from 'dayjs';
 
 const environment = 'production';
-const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_2`;
+const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_3`;
 // https://segmentfault.com/a/1190000020870683
 Sentry.init({
   // 基本选项
