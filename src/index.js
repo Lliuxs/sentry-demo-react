@@ -10,12 +10,12 @@ import SentryRRWeb from '@sentry/rrweb';
 import dayjs from 'dayjs';
 
 const environment = 'production';
-export const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_b`;
+export const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_m`;
 // https://segmentfault.com/a/1190000020870683
 Sentry.init({
   // 基本选项
   // sdk发送的地址 如果不配置读取 SENTRY_DSN 环境变量
-  dsn: "https://4212acf8a6144b20a36698d04ad6af8d@o1191297.ingest.sentry.io/6327464",
+  dsn: "https://9259ecd7a2384ff7b32eced08ed3d60c@o1191297.ingest.sentry.io/6328051",
   // 用户传输捕获时间的url不是DSN 实现自定义服务器端点
   // tunnel: '',
   // 调试模式 默认是false 设置为true SDK 尝试打印有用的调试信息 不建议在生产中打开它

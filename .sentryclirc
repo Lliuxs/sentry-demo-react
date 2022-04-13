@@ -4,7 +4,7 @@ token=7abcd4c9b1df4380a604a8d313478eec315d23fe2e16422fb4e058e36970d5e0
 [defaults]
 url=https://sentry.io
 org=shopee-ads
-project=react-demo
+project=sentry-demo-react
 
 [log]
 level=info
