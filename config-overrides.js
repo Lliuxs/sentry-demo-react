@@ -10,6 +10,7 @@ const addSentryPlugin = () => (config) => {
       authToken:
         '4c979c29b1794e86ab10f320193cb7f7efe43aacc10740dfa243ab7ae801635a',
       url: 'http://127.0.0.1:9000',
+      // url: 'https://sentry.io',
       org: 'shopee',
       project: 'react',
       urlPrefix: '~/',
@@ -21,6 +22,6 @@ const addSentryPlugin = () => (config) => {
 };
 
 module.exports = {
-  webpack: override(addSentryPlugin()),
+  // webpack: override(addSentryPlugin()),
   // devServer: {},
 };
