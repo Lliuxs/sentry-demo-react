@@ -1,0 +1,10 @@
+[auth]
+token=4c979c29b1794e86ab10f320193cb7f7efe43aacc10740dfa243ab7ae801635a
+
+[defaults]
+url=http://127.0.0.1:9000
+org=shopee
+project=react
+
+[log]
+level=info
