@@ -6,7 +6,7 @@ curl https://sentry.io/api/0/organizations/shopee-ads/releases/production@2022_0
 
 // auto 标志自动确定存储库名称
 sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(REACT_APP_RELEASE_VERSION)
-sentry-cli releases -o shopee-ads -p react-demo set-commits --auto  production@2022_04_13_4
+sentry-cli releases -o shopee-ads -p react-demo set-commits --auto  production@2022_04_13_5
 
 
 create_release:
@@ -16,5 +16,9 @@ upload_sourcemaps:
     sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files $(REACT_APP_RELEASE_VERSION) \
         upload-sourcemaps --url-prefix "~/static/js" --validate build/static/js
 
- sentry-cli releases -o shopee-ads -p react-demo files production@2022_04_13_4 \
+ sentry-cli releases -o shopee-ads -p react-demo files production@2022_04_13_5 \
         upload-sourcemaps --url-prefix "~/static/js" --validate build/static/js
+
+
+  sentry-cli releases -o shopee-ads -p react-demo files production@2022_04_13_6 \
+        upload-sourcemaps --url-prefix '~/' './build'

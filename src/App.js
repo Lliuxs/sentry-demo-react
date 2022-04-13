@@ -123,7 +123,7 @@ const store = createStore(
 
 function App() {
   const methodDoesNotExist = () => {
-    console.log(window.m.n());
+    console.log(window.x.y());
   };
   return (
     <div className='App'>
