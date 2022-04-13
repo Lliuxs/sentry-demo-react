@@ -9,7 +9,7 @@ import { Integrations } from '@sentry/tracing';
 import SentryRRWeb from '@sentry/rrweb';
 import dayjs from 'dayjs';
 
-const environment = 'uat';
+const environment = 'production';
 const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_2`;
 // https://segmentfault.com/a/1190000020870683
 Sentry.init({
@@ -106,7 +106,3 @@ createRoot(document.getElementById('root')).render(
 reportWebVitals();
 
 
-// curl https://sentry.io/api/0/organizations/shopee-ads/releases/uat@2022_04_13_1/deploys/ \
-//  -H 'Authorization: Bearer 7abcd4c9b1df4380a604a8d313478eec315d23fe2e16422fb4e058e36970d5e0' \
-//  -H 'Content-Type: application/json' \
-//  -d '{"environment":"prod"}'
