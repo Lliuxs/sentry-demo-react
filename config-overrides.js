@@ -1,18 +1,22 @@
+const dayjs = require('dayjs')
+const environment = 'production';
+const release = `${environment}@${dayjs().format('YYYY_MM_DD')}_4`;
 const { override } = require('customize-cra');
 // https://www.npmjs.com/package/@sentry/webpack-plugin
 const SentryCliPlugin = require('@sentry/webpack-plugin');
+
 
 // https://github.com/getsentry/sentry-webpack-plugin
 const addSentryPlugin = () => (config) => {
   config.plugins.push(
     new SentryCliPlugin({
-      // release: '1.0.0',
+      release: release,
       authToken:
-        '4c979c29b1794e86ab10f320193cb7f7efe43aacc10740dfa243ab7ae801635a',
-      url: 'http://127.0.0.1:9000',
+        '7abcd4c9b1df4380a604a8d313478eec315d23fe2e16422fb4e058e36970d5e0',
+      // url: 'http://127.0.0.1:9000',
       // url: 'https://sentry.io',
-      org: 'shopee',
-      project: 'react',
+      // org: 'shopee',
+      // project: 'react',
       urlPrefix: '~/',
       include: './build',
       ignore: ['node_modules'],
@@ -22,7 +26,7 @@ const addSentryPlugin = () => (config) => {
 };
 
 module.exports = {
-  // webpack: override(addSentryPlugin()),
+  webpack: override(addSentryPlugin()),
   // devServer: {},
 };
 
